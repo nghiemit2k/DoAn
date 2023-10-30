@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="2"
+    android:gravity="top|center"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/birinci"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/top_bg"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="45dp"
+                android:layout_gravity="left"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="0dp"
+                android:id="@+id/closeMenuBtn"
+                android:src="@drawable/ic_baseline_chevron_left_24"
+                app:tint="@color/bothwhite" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="-20dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="4dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:padding="2dp"
+                        android:text="@string/settings"
+                        android:textColor="@color/bothwhite"
+                        android:textSize="26sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="4dp"
+                        android:background="@color/bothwhite" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/sonuncu"
+        android:layout_below="@id/birinci"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+
+        <LinearLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/dark_light_linear"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/bg_for_buttons"
+                android:gravity="center|center_horizontal"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+
+                <ImageView
+                    android:id="@+id/dark_light_image"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="4dp"
+                    android:padding="2dp"
+                    android:src="@drawable/ic_baseline_dark_mode_24"
+                    app:tint="@color/purple_500" />
+
+                <TextView
+                    android:id="@+id/dark_light_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/enable_dark_mode"
+                    android:textColor="@color/newColor1"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/welcomeIntroLinear"
+                android:layout_width="240dp"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/bg_for_buttons"
+                android:gravity="center|center_horizontal"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="4dp"
+                    android:padding="2dp"
+                    android:src="@drawable/ic_baseline_wb_incandescent_24"
+                    app:tint="@color/purple_500" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/how_to_use"
+                    android:textColor="@color/newColor1"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/getBalance"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/bg_for_buttons"
+                android:gravity="center|center_horizontal"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="4dp"
+                    android:padding="2dp"
+                    android:src="@drawable/baseline_monetization_on_24"
+                    app:tint="@color/purple_500" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="Check Tokens"
+                    android:textColor="@color/newColor1"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rateUs"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/bg_for_buttons"
+                android:gravity="center|center_horizontal"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="4dp"
+                    android:padding="2dp"
+                    android:src="@drawable/ic_baseline_star_24"
+                    app:tint="@color/purple_500" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="App Ranking"
+                    android:textColor="@color/newColor1"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/share_app_linear"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/bg_for_buttons"
+                android:gravity="center|center_horizontal"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="4dp"
+                    android:padding="2dp"
+                    android:src="@drawable/ic_baseline_share_24"
+                    app:tint="@color/purple_500" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="Share App"
+                    android:textColor="@color/newColor1"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/writeUs"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/bg_for_buttons"
+                android:gravity="center|center_horizontal"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+
+                <ImageView
+                    android:layout_width="41dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="4dp"
+                    android:padding="2dp"
+                    android:src="@drawable/ic_baseline_email_24"
+                    app:tint="@color/purple_500" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="Contact us"
+                    android:textColor="@color/newColor1"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/moreApps"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/bg_for_buttons"
+                android:gravity="center|center_horizontal"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="4dp"
+                    android:padding="2dp"
+                    android:src="@drawable/ic_baseline_app_registration_24"
+                    app:tint="@color/purple_500" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="More Apps"
+                    android:textColor="@color/newColor1"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="bottom|center"
+        android:id="@+id/sonuncu"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_gravity="bottom|center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:layout_marginBottom="4dp"
+                android:fontFamily="@font/ubuntu_medium"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="2dp"
+                android:text="@string/version"
+                android:textColor="@color/newColor3"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginLeft="2dp"
+                android:layout_marginBottom="4dp"
+                android:maxLines="1"
+                android:id="@+id/versioncODEName"
+                android:padding="2dp"
+                android:text=""
+                android:textColor="@color/slow_white"
+                android:textSize="12sp" />
+
+
+
+
+
+        </LinearLayout>
+
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adViewSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            ads:adSize="SMART_BANNER"
+            ads:adUnitId="@string/admob_banner_id">
+        </com.google.android.gms.ads.AdView>
+
+        <TextView
+            android:id="@+id/myAppsNameTxtSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu_medium"
+            android:gravity="center"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="2dp"
+            android:maxLines="1"
+            android:padding="2dp"
+            android:fadingEdge="horizontal"
+            android:scrollHorizontally="true"
+            android:text=""
+            android:textColor="@color/slow_white"
+            android:textSize="16sp" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

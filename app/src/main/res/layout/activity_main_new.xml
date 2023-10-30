@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.devzen.chatbotai.MainActivityNew"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/topLinear"
+        android:layout_above="@id/bottomLinear">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/top_bg">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="2dp"
+                android:visibility="visible"
+                android:id="@+id/homeAnimation"
+                app:lottie_autoPlay="true"
+                android:foregroundGravity="center"
+                app:lottie_loop="true" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1.3"
+                    android:layout_gravity="center|left"
+                    android:id="@+id/creditBTN"
+                    android:gravity="left|center">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center"
+                        android:foregroundGravity="right"
+                        android:src="@drawable/baseline_monetization_on_24_1"
+                        app:tint="@color/bothwhite" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0 credits"
+                        android:textSize="12sp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:id="@+id/balanceTXT"
+                        android:textColor="@color/bothwhite"/>
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_weight="0.4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:textStyle="bold"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/bothwhite"/>
+
+                <ImageView
+                    android:layout_weight="1.3"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:id="@+id/menuBtn"
+                    android:src="@drawable/ic_baseline_menu_24"
+                    android:layout_gravity="right|center"
+                    android:foregroundGravity="right"
+                    app:tint="@color/bothwhite" />
+
+            </LinearLayout>
+
+
+
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right|center"
+            android:layout_marginRight="20dp"
+            android:id="@+id/clearChat"
+            android:visibility="gone"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Clear chat history"
+                android:layout_marginRight="10dp"
+                android:gravity="left|center"/>
+
+            <ImageView
+                android:visibility="visible"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/baseline_clear_all_24"
+                android:layout_gravity="right|center"
+                app:tint="@color/black" />
+        </LinearLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/readyforaskLinear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/homeAnimation2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="0dp"
+                        android:foregroundGravity="center"
+                        android:visibility="visible"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true" />
+
+
+                    <TextView
+                        android:id="@+id/aitext1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:gravity="center"
+                        android:text="AI is ready for answer!"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/ubuntu_light"
+                        android:gravity="center"
+                        android:text="Put your question into words and send it"
+                        android:textSize="16sp" />
+
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/recycler_view"
+                    />
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/bottomLinear"
+        android:layout_alignParentBottom="true">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bottom_bg"
+
+            android:weightSum="1"
+            android:padding="20dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/queryLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.13">
+
+                <EditText
+                    android:id="@+id/query"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/textbox1"
+                    android:inputType="textCapSentences"
+                    android:maxLines="10"
+                    android:textColor="@color/bothblack" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="0.87"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginLeft="8dp"
+                android:padding="8dp"
+                android:background="@drawable/textbox2"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:id="@+id/btnSend"
+                    android:visibility="gone"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_baseline_send_24"
+                    app:tint="@color/bothwhite" />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:id="@+id/btnAudio"
+                    android:visibility="visible"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/baseline_mic_24"
+                    app:tint="@color/bothwhite" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

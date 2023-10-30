@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "15447630654",
+    "project_id": "chat-bot-ai-1d03d",
+    "storage_bucket": "chat-bot-ai-1d03d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:15447630654:android:a3d595604222968bac826f",
+        "android_client_info": {
+          "package_name": "com.devzen.chatbotai"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "15447630654-h4m5q5c87297f1lioghph5c99vsn7453.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4Dpry6stVbKJvQtHOaYpo0zG4QIAd4uo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "15447630654-h4m5q5c87297f1lioghph5c99vsn7453.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
